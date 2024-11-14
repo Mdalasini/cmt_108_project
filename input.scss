@@ -1,0 +1,127 @@
+$fancy-font: "Mea Culpa", cursive;
+$calm-font: "Gowun Dodum",san-serif;
+
+:root {
+  --pink-color: #e44a58;
+  --black-color: #24282f;
+  --yellow-color: #f6f000;
+  --gray-color: #f6f6f6;
+}
+
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      font-weight: 400;
+    }
+    button {
+      background-color: var(--yellow-color);
+      border: none;
+      padding: 10px 8px;
+      font-weight: 450;
+    }
+  }
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, var(--black-color), var(--pink-color)); 
+    -webkit-background-clip: text;
+    color: transparent; 
+    background-clip: text;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.8s ease, transform 0.8s ease;
+
+  &:hover {
+    flex: 7;
+    transform: scale(1.01);
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 70%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 20px 30px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6); 
+  opacity: 0;
+  transform: translate(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  h3 {
+    font-family: $fancy-font;
+    font-size: xx-large;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  p {
+    font-family: $calm-font;
+  }
+}
+
+// Volswagen-beetle
+.item-1 { 
+  background-image: url('https://images.unsplash.com/photo-1516669207770-9451d52f0844?q=80&w=1065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+// Ford mustang
+.item-2 { 
+  background-image: url('https://images.unsplash.com/photo-1579192999864-0f196c760bec?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+// Nissan
+.item-3 { 
+  background-image: url('https://images.unsplash.com/photo-1624601051127-ababe0497d24?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+// Porsche 911
+.item-4 { 
+  background-image: url('https://images.unsplash.com/photo-1414518876340-9c8737380507?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+// Chevy impala
+.item-5 { 
+  background-image: url('https://images.unsplash.com/photo-1587750113469-d2ba02441e8f?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
